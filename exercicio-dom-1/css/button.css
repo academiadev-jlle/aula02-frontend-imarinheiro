@@ -1,0 +1,25 @@
+.button {
+    background-color: #404040;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 21.33px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button.black {
+    background-color: whitesmoke;
+    color: #404040;
+    border: 2px solid #404040;
+}
+
+.button.black:hover {
+    background-color: #404040;
+    color: white;
+}

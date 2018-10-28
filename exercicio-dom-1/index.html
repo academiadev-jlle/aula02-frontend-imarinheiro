@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bilbo Baggins</title>
+    <link rel="stylesheet" type="text/css" href="css/table.css"/>
+    <link rel="stylesheet" type="text/css" href="css/title.css"/>
+    <link rel="stylesheet" type="text/css" href="css/button.css"/>
+    <link rel="stylesheet" type="text/css" href="css/input.css"/>
+    <link rel="stylesheet" type="text/css" href="css/url.css"/>
+</head>
+<body>
+<h1>Ações da Bolsa de Valores</h1>
+
+<form id="form-stock">
+    <label for="stock">Ação:</label>
+    <input id="stock" name="stock" type="text" placeholder="Nome da Ação"/>
+    <label for="price">Cotação:</label>
+    <input id="price" name="price" type="number" placeholder="0.0" step="0.01" min="0"/>
+    <label for="url">URL:</label>
+    <input id="url" name="url" type="text" placeholder="http://example.com"/>
+    <button type="button" class="button black" id="btn-save">+ Adiconar</button>
+</form>
+<!--Tabela-->
+<table cellspacing="5%" cellpadding="5%">
+    <thead>
+    <tr class="inverted">
+        <th>Nome</th>
+        <th>Cotação</th>
+        <th>Dica</th>
+    </tr>
+    </thead>
+    <tbody id="">
+    <tr>
+        <td><a href="//br.advfn.com/bolsa-de-valores/bovespa/vale-VALE3/cotacao"
+               target="_blank" title="Cotação Vale ON">Vale</a></td>
+        <td class="stock-price">55,6</td>
+        <td class="hint"> </td>
+    </tr>
+    <tr>
+        <td><a href="//br.advfn.com/bolsa-de-valores/bovespa/ibovespa-IBOV/cotacao"
+               target="_blank" title="Cotação Ibovespa">Ibovespa</a></td>
+        <td class="stock-price">85.719,879</td>
+        <td class="hint"> </td>
+    </tr>
+    <tr>
+        <td><a href="//br.advfn.com/bolsa-de-valores/bovespa/itau-unibanco-ITUB4/cotacao"
+               target="_blank" title="Cotação Itaú Unibanco PN">Itaú Unibanco</a></td>
+        <td class="stock-price">50</td>
+        <td class="hint"> </td>
+    </tr>
+    <tr>
+        <td><a href="//br.advfn.com/bolsa-de-valores/bovespa/banco-do-brasil-BBAS3/cotacao"
+               target="_blank" title="Cotação Banco do Brasil ON">Banco do Brasil</a></td>
+        <td class="stock-price">42,42</td>
+        <td class="hint"> </td>
+    </tr>
+    <tr>
+        <td><a href="//br.advfn.com/bolsa-de-valores/bovespa/bradesco-BBDC4/cotacao"
+               target="_blank" title="Cotação Bradesco PN">Bradesco</a></td>
+        <td class="stock-price">34,09</td>
+        <td class="hint"> </td>
+    </tr>
+    <tr>
+        <td><a href="//br.advfn.com/bolsa-de-valores/bovespa/bb-seguridade-BBSE3/cotacao"
+               target="_blank" title="Cotação Bbseguridade ON">BB Seguridade</a></td>
+        <td class="stock-price">26,03</td>
+        <td class="hint"> </td>
+    </tr>
+    <tr>
+        <td><a href="//br.advfn.com/bolsa-de-valores/bovespa/b2w-BTOW3/cotacao"
+               target="_blank" title="Cotação B2W Digital ON">B2W</a></td>
+        <td class="stock-price">34,21</td>
+        <td class="hint"> </td>
+    </tr>
+    <tr>
+        <td><a href="//br.advfn.com/bolsa-de-valores/bovespa/cielo-CIEL3/cotacao"
+               target="_blank" title="Cotação Cielo ON">Cielo</a></td>
+        <td class="stock-price">12,15</td>
+        <td class="hint"> </td>
+    </tr>
+    <tr>
+        <td><a href="//br.advfn.com/bolsa-de-valores/bovespa/eletrobras-ELET3/cotacao"
+               target="_blank" title="Cotação Eletrobras ON">Eletrobras</a></td>
+        <td class="stock-price">23,32</td>
+        <td class="hint"> </td>
+    </tr>
+    <tr>
+        <td><a href="//br.advfn.com/bolsa-de-valores/bovespa/petrobras-PETR3/cotacao"
+               target="_blank" title="Cotação Petrobras ON">Petrobras</a></td>
+        <td class="stock-price">30</td>
+        <td class="hint"> </td>
+    </tr>
+    <tr>
+        <td><a href="//br.advfn.com/bolsa-de-valores/bovespa/usiminas-USIM5/cotacao"
+               target="_blank" title="Cotação Usiminas PNA">Usiminas</a></td>
+        <td class="stock-price">10,06</td>
+        <td class="hint"> </td>
+    </tr>
+    </tbody>
+</table>
+<!--import js-->
+<script src="js/action.js"></script>
+</body>
+</html>

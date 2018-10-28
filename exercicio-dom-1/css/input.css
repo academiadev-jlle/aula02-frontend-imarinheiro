@@ -1,0 +1,19 @@
+input[type=text], input[type=number], input[type=url]  {
+    -moz-appearance: textfield;
+    border: none;
+    border-bottom: 1px solid #404040;
+    width: 24%;
+}
+
+input[type=text]:invalid, input[type=number]:invalid, input[type=url]:invalid {
+    border: none;
+    border-bottom: 2px solid #d80c00;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+label {
+    font-weight: bold;
+    color: #404040;
+}

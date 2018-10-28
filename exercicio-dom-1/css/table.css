@@ -1,0 +1,45 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr.inverted{
+    background-color: whitesmoke;
+    color: #404040;
+    padding: 8px;
+    text-align: left;
+    border: 2px solid #404040;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #A2A2A2;
+}
+
+tr.less:not(.inverted):hover {
+    background-color: #ffdaae;
+}
+
+tr.more:not(.inverted):hover {
+    background-color: #cdffcb;
+}
+
+tr.equal:not(.inverted):hover {
+    background-color: #dcd7f5;
+}
+
+td.less{
+    color: #ff852d;
+    font-weight: bold;
+}
+
+td.more {
+    color: #25e16d;
+    font-weight: bold;
+}
+
+td.equal {
+    color: #5d5dff;
+    font-weight: bold;
+}
