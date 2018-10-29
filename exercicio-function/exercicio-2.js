@@ -4,6 +4,6 @@ const newForEach = (array, callback) => {
     });
 };
 
-const dogs = ['nimeria', 'ghost', 'shaggydog', 'lady', 'graywind'];
+const dogs = ['nimeria', 'ghost', 'shaggydog', 'lady', 'graywind', 'summer'];
 
 newForEach(dogs, console.log);
