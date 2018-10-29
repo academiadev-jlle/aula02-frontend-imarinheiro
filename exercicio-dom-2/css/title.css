@@ -1,0 +1,11 @@
+body > * {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+}
+
+.ui.stackable.menu .item {
+    width: auto !important;
+}
+
+.ui.secondary.pointing.menu .item {
+    align-self: center;
+}
