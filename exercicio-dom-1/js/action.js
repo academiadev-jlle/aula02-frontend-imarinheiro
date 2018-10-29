@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', onLoadDOM);
 
 function onLoadDOM() {
     updateHint();
-    document.querySelector('#btn-save').addEventListener('click', btnCadastrarAcao);
+    document.querySelector('#btn-save').addEventListener('click', btnSendStock);
 }
 
 function updateHint() {
@@ -18,7 +18,7 @@ function updateHint() {
     });
 }
 
-function btnCadastrarAcao(event) {
+function btnSendStock(event) {
     const form = document.querySelector('#form-stock');
     if(document.querySelector('p') !== null){
         document.querySelector('p').remove();
