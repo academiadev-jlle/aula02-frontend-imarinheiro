@@ -15,6 +15,16 @@ body > * {
 .ui.secondary.pointing.menu .item {
     align-self: center;
 }
-button{
+
+button {
     cursor: pointer;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    font-weight: bold;
+    color: whitesmoke;
 }
