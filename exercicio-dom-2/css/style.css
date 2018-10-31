@@ -1,3 +1,9 @@
+body {
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+
 body > * {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif !important;
 }
@@ -8,4 +14,7 @@ body > * {
 
 .ui.secondary.pointing.menu .item {
     align-self: center;
+}
+button{
+    cursor: pointer;
 }

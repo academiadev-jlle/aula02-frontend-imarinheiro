@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Character</title>
+    <title>Starships</title>
     <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
-    <link rel="stylesheet" type="text/css" href="css/title.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous"></script>
@@ -13,45 +13,30 @@
 <body>
 <nav class="ui secondary pointing stackable menu">
     <p class="header item">
-        Starwars
+        STARWARS
     </p>
-    <a class="active item" href="index.html">Characters</a>
-    <a class="item" href="planets.html">Planets</a>
-    <a class="item" href="starships.html">Starhips</a>
+    <button type="button" id="starships" class="item"><i class="rocket icon"></i>Starships</button>
+    <button type="button" id="planets" class="item"><i class="globe icon"></i>Planets</button>
+    <button type="button" id="people" class="item"><i class="child icon"></i>Characters</button>
 </nav>
-<table class="ui inverted table">
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Status</th>
-        <th>Notes</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>John</td>
-        <td>Approved</td>
-        <td>None</td>
-    </tr>
-    <tr>
-        <td>Jamie</td>
-        <td>Approved</td>
-        <td>Requires call</td>
-    </tr>
-    <tr>
-        <td>Jill</td>
-        <td>Denied</td>
-        <td>None</td>
-    </tr>
-    </tbody>
-    <tfoot>
-    <tr><th>3 People</th>
-        <th>2 Approved</th>
-        <th></th>
-    </tr></tfoot>
-</table>
-
+<article>
+    <table class="ui inverted table" id="table-data">
+        <thead>
+        <tr>
+            <th>Starship Name</th>
+            <th>Modelo</th>
+            <th>Fabricante</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+        <tr>
+        </tr>
+        </tfoot>
+    </table>
+</article>
 <!--import js-->
-<script src="js.js"></script>
+<script src="js/js.js"></script>
 </body>
 </html>
