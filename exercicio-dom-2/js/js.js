@@ -10,9 +10,14 @@
 document.addEventListener('DOMContentLoaded', onLoadDOM);
 
 function onLoadDOM() {
+    document.querySelector('#home').addEventListener('click', loadHome);
     document.querySelector('#starships').addEventListener('click', fetchDataStarships);
     document.querySelector('#planets').addEventListener('click', fetchDataPlanets);
     document.querySelector('#people').addEventListener('click', fetchDataPeople);
+}
+
+function loadHome(){
+    window.location.href = 'index.html';
 }
 
 

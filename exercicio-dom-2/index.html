@@ -12,14 +12,27 @@
 </head>
 <body>
 <nav class="ui secondary pointing stackable menu">
-    <p class="header item">
+    <button type="button" id="home" class="header item">
         STARWARS
-    </p>
+    </button>
     <button type="button" id="starships" class="item"><i class="rocket icon"></i>Starships</button>
     <button type="button" id="planets" class="item"><i class="globe icon"></i>Planets</button>
     <button type="button" id="people" class="item"><i class="child icon"></i>Characters</button>
 </nav>
-<article>
+<article class="ui container">
+    <h2 class="ui icon center aligned header">
+  <i class="first order icon"></i>
+  <div class="content">
+    STARWARS WIKI
+    <div class="sub header">Find everything about Star Wars.</div>
+  </div>
+  <section class="ui placeholder segment">
+    <p>Página desenvolvida como exercício prático para o curso Academia Dev Joinville.<br>
+    Best regards, Marinheiro!<br>
+May the force be with you!</p>
+            <a class="ui button" href="https://www.codenation.com.br/" target="_blank">Academia Dev Joinville</a>
+</section>
+</h2>
     <table class="ui inverted table" id="table-data">
         <thead>
         <tr>
@@ -35,19 +48,7 @@
             <td>The Star Wars API</td>
             <td><a target="_blank" href="https://swapi.co/">https://swapi.co/</a></td>
         </tr>
-        <tr>
-            <td colspan="3"><p>Página desenvolvida como exercício prático para o curso <a
-                    href="https://www.codenation.com.br/" target="_blank">Academia Dev Joinville</a>.</p></td>
-        </tr>
         </tbody>
-        <tfoot>
-        <tr>
-            <td colspan="3">Best regards, Marinheiro!</td>
-        </tr>
-        <tr>
-            <td colspan="3">May the force be with you!</td>
-        </tr>
-        </tfoot>
     </table>
 </article>
 <!--import js-->
