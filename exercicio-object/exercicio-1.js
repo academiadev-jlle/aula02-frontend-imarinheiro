@@ -9,10 +9,29 @@
 // Considere que o seu objeto pode ter outros objetos como propriedade :)
 
 let deepEquals = (a, b) => {
-    return typeof (a) === typeof (b) && 
-    Object.getOwnPropertyNames(a).length === Object.getOwnPropertyNames(b).length && 
-    a === b;
+    if (typeof (a) !== typeof (b) &&
+        (Object.getOwnPropertyNames(a).length !== Object.getOwnPropertyNames(b).length)) {
+        return false;
+    }
+    for (let i = 0; i < Object.getOwnPropertyNames(a).length; i++) {
+        let propName = Object.getOwnPropertyNames(a)[i];
+        if (a[propName] !== b[propName]) {
+            if (JSON.stringify(a[propName]) === JSON.stringify(b[propName])) {
+                continue;
+            }
+            return false;
+        }
+    }
+    return true;
 };
+
+
+let isEqualsLazy = (a, b) => {
+    return JSON.stringify(a) === JSON.stringify(b);
+};
+
+
+
 
 jhon1 = {
     "titulo": "Jhon Snow",
@@ -20,7 +39,7 @@ jhon1 = {
     uma fortaleza ancestral no Norte do reino de Westeros.`,
     "birth": new Date(1986, 12, 26),
     "house": ["Stark"]
-}
+};
 
 jhon2 = {
     "titulo": "Jhon Snow",
@@ -28,7 +47,7 @@ jhon2 = {
     uma fortaleza ancestral no Norte do reino de Westeros.`,
     "birth": new Date(1986, 12, 26),
     "house": ["Stark"]
-}
+};
 
 arya = {
     "titulo": "Arya Stark",
@@ -38,13 +57,22 @@ arya = {
     meio-irmão, Jon Snow`,
     "birth": new Date(1997, 4, 15),
     "house": ["Stark"]
+};
+
+
+function assertEquals(result, expected, msg="") {
+    if (result === expected) {
+        console.log(`Passou: ${msg}`);
+    } else {
+        console.log(`Falhou: ${msg}`);
+    }
 }
-console.log(typeof (jhon1));
-console.log(deepEquals(jhon1, jhon1)); //true
-console.log(deepEquals(jhon1, jhon2)); //true
-console.log(deepEquals(jhon1, arya)); //false
 
 
-var objeto1 = {id: 1 , name: 'atila'}
-var objeto2 = {id: 1 , name: 'atila'}
-var objeto3 = {id: 2 , name: 'marcos'}
+assertEquals(deepEquals(jhon1, jhon1), true, "deepEquals(jhon1, jhon1)");
+assertEquals(deepEquals(jhon1, jhon2), true, "deepEquals(jhon1, jhon2)");
+assertEquals(deepEquals(jhon1, arya), false, "deepEquals(jhon1, arya)");
+
+assertEquals(isEqualsLazy(jhon1, jhon1), true, "isEqualsLazy(jhon1, jhon1)");
+assertEquals(isEqualsLazy(jhon1, jhon2), true, "isEqualsLazy(jhon1, jhon2)");
+assertEquals(isEqualsLazy(jhon1, arya), false, "isEqualsLazy(jhon1, arya)");
