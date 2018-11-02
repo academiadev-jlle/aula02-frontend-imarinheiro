@@ -16,7 +16,7 @@ function onLoadDOM() {
     document.querySelector('#people').addEventListener('click', fetchDataPeople);
 }
 
-function loadHome(){
+function loadHome() {
     window.location.href = 'index.html';
 }
 
@@ -25,8 +25,8 @@ function fetchDataStarships(event) {
     document.querySelector('#starships').classList.add('active');
     document.querySelector('#planets').classList.remove('active');
     document.querySelector('#people').classList.remove('active');
-    let table = document.getElementsByTagName("table")[0];
-    table.parentNode.removeChild(table);
+    removeElement("table");
+    removeElement("section");
     const article = document.querySelector("article");
     const header = ["Starship Name", "Modelo", "Fabricante"];
     const url = "https://swapi.co/api/starships";
@@ -48,8 +48,8 @@ function fetchDataPlanets(event) {
     document.querySelector('#starships').classList.remove('active');
     document.querySelector('#planets').classList.add('active');
     document.querySelector('#people').classList.remove('active');
-    let table = document.getElementsByTagName("table")[0];
-    table.parentNode.removeChild(table);
+    removeElement("table");
+    removeElement("section");
     const article = document.querySelector("article");
     const header = ["Planet Name", "Terrain", "Climate"];
     const url = "https://swapi.co/api/planets";
@@ -71,8 +71,8 @@ function fetchDataPeople(event) {
     document.querySelector('#starships').classList.remove('active');
     document.querySelector('#planets').classList.remove('active');
     document.querySelector('#people').classList.add('active');
-    let table = document.getElementsByTagName("table")[0];
-    table.parentNode.removeChild(table);
+    removeElement("table");
+    removeElement("section");
     const article = document.querySelector("article");
     const header = ["Character Name", "Gender", "Birth Year"];
     const url = "https://swapi.co/api/people";
@@ -87,6 +87,13 @@ function fetchDataPeople(event) {
         }
     };
     xhr.send();
+}
+
+function removeElement(name) {
+    const element = document.getElementsByTagName(name)[0];
+    if (element !== undefined) {
+        element.parentNode.removeChild(element);
+    }
 }
 
 function createTable(items, header, type) {
@@ -112,15 +119,15 @@ function createRow(item, elemento, type) {
 
     if (elemento === 'td') {
         td1.textContent = item.name;
-        if(type === 'starships') {
+        if (type === 'starships') {
             td2.textContent = item.model;
             td3.textContent = item.manufacturer;
         }
-        if (type ==='planets'){
+        if (type === 'planets') {
             td2.textContent = item.terrain;
             td3.textContent = item.climate;
         }
-        if (type ==='people'){
+        if (type === 'people') {
             td2.textContent = item.gender;
             td3.textContent = item.birth_year;
         }
